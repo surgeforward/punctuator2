@@ -73,6 +73,7 @@ def restore(output_file, text, word_vocabulary, reverse_punctuation_vocabulary, 
     i = 0
     #with codecs.open(output_file, 'w', 'utf-8') as f_out:
     import sys
+    #allow - as output file to mean stdout override 
     with sys.stdout if output_file=='-' else codecs.open(output_file, 'w', 'utf-8') as f_out:
         while True:
 
